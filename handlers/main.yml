@@ -1,0 +1,8 @@
+---
+- name: configure
+  service:
+       name: haproxy
+       state: restarted
+       enabled: true
+
+

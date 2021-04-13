@@ -1,0 +1,10 @@
+---
+- name: "install haproxy"
+  package:
+        name: haproxy
+        state: present
+- name: "configure load balancer"
+  template:
+        src: "haproxy.cfg.j2"
+        dest: "{{ dest_file }}"
+  notify: configure
